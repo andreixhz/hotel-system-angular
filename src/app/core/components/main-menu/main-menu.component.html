@@ -1,0 +1,16 @@
+<section class="menu">
+    <div class="d-flex justify-content-center w-100 mt-5 mb-4">
+        <img src="/assets/images/logo.svg"/>
+    </div>
+
+    <div class="list">
+        <div 
+            *ngFor="let i of menuListService.getMenu()" 
+            (click)="handleGoTo(i.path)"
+            [class]="'item hv ' + listenerHasSelected(i.path)">
+            <i [class]="i.icon"></i>{{ i.title }}
+        </div>
+
+    </div>
+
+</section>
