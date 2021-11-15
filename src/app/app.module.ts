@@ -11,7 +11,7 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { GuestsComponent } from './pages/guests/guests.component';
 import { ReservesComponent } from './pages/reserves/reserves.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { ServicesComponent } from './pages/services/services.component';
 import { EmployersComponent } from './pages/employers/employers.component';
 import { SuportComponent } from './pages/suport/suport.component';
 
@@ -25,7 +25,7 @@ import { SuportComponent } from './pages/suport/suport.component';
     GuestsComponent,
     ReservesComponent,
     RoomsComponent,
-    ProductsComponent,
+    ServicesComponent,
     EmployersComponent,
     SuportComponent
   ],

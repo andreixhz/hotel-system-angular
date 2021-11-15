@@ -34,9 +34,9 @@ let menuItems: MenuItem[] = [
     icon: "fas fa-bed",
     path: "quarto"
   }, {
-    title: "Produtos",
+    title: "Serviços",
     icon: "fas fa-cocktail",
-    path: "produto"
+    path: "service"
   }, {
     title: "Funcionarios",
     icon: "fas fa-user-tie",
