@@ -15,12 +15,20 @@ export class HeaderService {
       title,
       description,
       locations,
-      subtitle
+      subtitle,
+      backTo: undefined
     }
   }
 
   getHeader() {
     return this.header;
+  }
+
+  backTo(backTo?: string) {
+    this.header = {
+      ...this.header,
+      backTo
+    }
   }
 
 }

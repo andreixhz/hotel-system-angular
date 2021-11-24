@@ -8,40 +8,25 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ReservesComponent } from './pages/reserves/reserves.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { SuportComponent } from './pages/suport/suport.component';
+import { GuestFormComponent } from './pages/guests/guest-form/guest-form.component';
+import { EmployersFormComponent } from './pages/employers/employers-form/employers-form.component';
 
 const routes: Routes = [
   {
     path: 'dashboard',
     component: MainComponent,
     children: [
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'hospede',
-        component: GuestsComponent
-      },
-      {
-        path: 'reserva',
-        component: ReservesComponent
-      },
-      {
-        path: 'quarto',
-        component: RoomsComponent
-      },
-      {
-        path: 'service',
-        component: ServicesComponent
-      },
-      {
-        path: 'funcionario',
-        component: EmployersComponent
-      },
-      {
-        path: 'suporte',
-        component: SuportComponent
-      },
+      { path: '', component: HomeComponent },
+      { path: 'hospede', component: GuestsComponent },
+      { path: 'hospede/criar', component: GuestFormComponent },
+      { path: 'hospede/criar/:id', component: GuestFormComponent },
+      { path: 'reserva', component: ReservesComponent },
+      { path: 'quarto', component: RoomsComponent },
+      { path: 'service', component: ServicesComponent },
+      { path: 'funcionario', component: EmployersComponent },
+      { path: 'funcionario/criar', component: EmployersFormComponent },
+      { path: 'funcionario/criar/:id', component: EmployersFormComponent },
+      { path: 'suporte', component: SuportComponent },
     ]
   }
 ];

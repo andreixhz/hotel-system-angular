@@ -3,6 +3,7 @@ export interface Header {
     title: string,
     description?: string,
     locations?: string[],
-    subtitle?: string
+    subtitle?: string,
+    backTo?: string
 
 }

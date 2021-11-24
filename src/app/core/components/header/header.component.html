@@ -1,4 +1,8 @@
 <header>
     <h1>{{headerService.getHeader()?.title || 'Page'}}</h1>
     <h3>{{headerService.getHeader()?.subtitle || 'Subtitle'}}</h3>
+    <p *ngIf="!headerService.getHeader()?.backTo">&nbsp;</p>
+    <a *ngIf="headerService.getHeader()?.backTo" [routerLink]="headerService.getHeader()?.backTo">
+        <i class="fas fa-chevron-left me-2"></i>Voltar
+    </a>
 </header>

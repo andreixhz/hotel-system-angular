@@ -1,0 +1,24 @@
+<div class="d-flex bx p-3 col-12" [formGroup]="formGroup">
+    
+    <div
+        *ngFor="let input of data"
+        [style.width]="'175px'"
+        [style.marginRight]="'10px'"
+        >
+        
+            <app-input *ngIf="input.type === 'text'" [type]="input.type" [formControlName]="input.data" [title]="input.title"></app-input>
+            <app-input *ngIf="input.type === 'date'" [type]="input.type" [formControlName]="input.data" [title]="input.title"></app-input>
+            <app-select *ngIf="input.type === 'select'" [style]="'min'" [options]="input.options" [formControlName]="input.data" [title]="input.title"></app-select>
+    </div>
+
+    <button
+        [style.marginLeft]="'auto'"
+        [style.height]="'50px'"
+        (click)="onSearch.emit(formGroup.value)"
+        class="s-1"
+        >
+        <i class="fas fa-search"></i>
+        Buscar
+    </button>
+
+</div>

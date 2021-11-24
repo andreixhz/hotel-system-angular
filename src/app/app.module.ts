@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,17 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { EmployersComponent } from './pages/employers/employers.component';
 import { SuportComponent } from './pages/suport/suport.component';
-
+import { FilterComponent } from './composition/filter/filter.component';
+import { CardsModule } from 'angular-bootstrap-md';
+import { InputComponent } from './components/input/input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputDateComponent } from './components/input-date/input-date.component';
+import { MatTableModule } from '@angular/material/table';
+import { GuestFormComponent } from './pages/guests/guest-form/guest-form.component';
+import { EmployersFormComponent } from './pages/employers/employers-form/employers-form.component';
+import { SelectComponent } from './components/select/select.component';
+import { MatSelectModule } from '@angular/material/select';
+import { ServicesFormComponent } from './pages/services/services-form/services-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +38,25 @@ import { SuportComponent } from './pages/suport/suport.component';
     RoomsComponent,
     ServicesComponent,
     EmployersComponent,
-    SuportComponent
+    SuportComponent,
+    FilterComponent,
+    InputComponent,
+    InputDateComponent,
+    GuestFormComponent,
+    EmployersFormComponent,
+    SelectComponent,
+    ServicesFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CardsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
