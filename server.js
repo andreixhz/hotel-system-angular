@@ -1,27 +1,12 @@
-const express = require('express')
-const app = express()
-const cors = require('cors');
+const express = require('express');
+const path = require('path');
 
-const publicWeb = __dirname + '/dist/pim-hotel';
+const app = express();
 
-app.use(cors({ origin: '*' }));
+app.use(express.static('./dist/pim-hotel'));
 
-app.use(express.static(publicWeb))
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', { root: '/dist/pim-hotel/' }),
+);
 
-app.get('mensagens', (req, res) => {
-
-    while (1) {
-        setTimeout(() => {
-            return res.send({ message: 'ui ui' })
-        }, 4000);
-    }
-
-})
-
-app.get('*', (req, res) => {
-    res.sendFile('index.html', { root: publicWeb });
-});
-
-app.listen(8080, () => {
-    console.log("Servidor rodando na porta interna 8080")
-});
+app.listen(process.env.PORT || 8080);
