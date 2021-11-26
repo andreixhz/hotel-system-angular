@@ -1,0 +1,35 @@
+<div class="d-flex h-f">
+    <div class="col-6">
+        <app-filter
+            [data]="filterItems"
+            (onSearch)="handleSearch($event)"
+        ></app-filter>
+
+        <div class="col-12 d-flex mt-3">
+            <button class="button-primary s-2 me-2" [routerLink]="'criar'">
+                Criar Novo Serviço
+            </button>
+        </div>
+                
+        <div class="list mt-3">
+            <div class="bx p-3 mb-2" *ngFor="let service of rows">
+                <div class="d-flex justify-content-between">
+                    <h2>{{ service.nome }}</h2>
+                    <h2>R$ {{ service.valor }}</h2>
+                </div>
+                <p class="mt-2">
+                    {{ service.descricao }}
+                </p>
+                <div class="col-12">
+                    <button [routerLink]="'criar/' + service.idServico.toString()" class="me-2">Editar</button>
+                    <button (click)="handleDelete(service.idServico)">Excluir</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-6 d-flex justify-content-center">
+        <img height="400px" src="/assets/images/Waiters-pana.svg"/>
+    </div>
+</div>

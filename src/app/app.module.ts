@@ -26,6 +26,13 @@ import { EmployersFormComponent } from './pages/employers/employers-form/employe
 import { SelectComponent } from './components/select/select.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ServicesFormComponent } from './pages/services/services-form/services-form.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { ComodidadeComponent } from './pages/rooms/modal/comodidade/comodidade.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ComodidadeCriarComponent } from './pages/rooms/modal/comodidade/comodidade-criar/comodidade-criar.component';
+import { RoomsFormComponent } from './pages/rooms/rooms-form/rooms-form.component';
+import { ChipSelectorComponent } from './components/chip-selector/chip-selector.component';
+import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +52,11 @@ import { ServicesFormComponent } from './pages/services/services-form/services-f
     GuestFormComponent,
     EmployersFormComponent,
     SelectComponent,
-    ServicesFormComponent
+    ServicesFormComponent,
+    ComodidadeComponent,
+    ComodidadeCriarComponent,
+    RoomsFormComponent,
+    ChipSelectorComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +67,10 @@ import { ServicesFormComponent } from './pages/services/services-form/services-f
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

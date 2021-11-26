@@ -22,6 +22,7 @@ export class SelectComponent {
   @Input() placeholder: string = "Clique para selecionar";
   @Output() onOptionClick = new EventEmitter();
   @Input() style: string = "select"
+  @Input() clear: boolean = false;
 
   constructor() { }
 
@@ -44,6 +45,16 @@ export class SelectComponent {
 
   writeValue(obj: any): void {
     this.value = obj;
+  }
+
+  clearValue() {
+    this.val = "";
+  }
+
+  click(option: any) {
+    this.onOptionClick.emit(option);
+    if (this.clear)
+      this.clearValue()
 
   }
 

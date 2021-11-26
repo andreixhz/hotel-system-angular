@@ -1,1 +1,45 @@
-<p>rooms works!</p>
+<div class="d-flex h-f">
+    <div class="col-6">
+        <app-filter
+            [data]="filterItems"
+            (onSearch)="handleSearch($event)"
+        ></app-filter>
+
+        <div class="col-12 d-flex mt-3">
+            <button class="button-primary s-2 me-2" [routerLink]="'criar'">
+                Criar Novo quarto
+            </button>
+
+             <button (click)="handleComodidadePopup()" class="s-2">
+                Comodidades
+            </button>
+        </div>
+                
+        <div class="list mt-3">
+            <div class="bx p-3 mb-2" *ngFor="let quarto of rows">
+                <div class="d-flex justify-content-between">
+                    <h2>{{ quarto.nome }}</h2>
+                    <h2>{{ quarto.numeroQuarto }}</h2>
+                </div>
+                <h3>R$ {{ quarto.valorDiaria }}</h3>
+                <mat-chip-list class="example-chip">
+                    <mat-chip class="example-box" *ngFor="let comodidade of quarto.comodidades">
+                        {{ comodidade.nome }}
+                    </mat-chip>
+                </mat-chip-list>
+                <p class="mt-2">
+                    {{ quarto.descricao }}
+                </p>
+                <div class="col-12">
+                    <button [routerLink]="'criar/' + quarto.idQuarto.toString()" class="me-2">Editar</button>
+                    <button (click)="handleDelete(quarto.idQuarto)">Excluir</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-6 d-flex justify-content-center">
+        <img height="400px" src="/assets/images/Night Calls-amico.svg"/>
+    </div>
+</div>

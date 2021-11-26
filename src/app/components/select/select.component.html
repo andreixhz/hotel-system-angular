@@ -10,7 +10,7 @@
             (ngModelChange)="getOptionValue()"
         >
         <mat-option 
-            (click)="onOptionClick.emit(option)"
+            (click)="click(option)"
             *ngFor="let option of options" 
             [value]="option"
             >

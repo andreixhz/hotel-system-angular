@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Comodidade</h1>
+<div mat-dialog-content>
+  <p>Gerencia as comodidades existentes</p>
+  <div class="list">
+    <div *ngFor="let comodidade of rows" class="item p-2 d-flex justify-content-between">
+      <div class="col-10">
+        <h4><b>{{ comodidade.nome }}</b></h4>
+        <p>{{ comodidade.descricao }}</p>
+      </div>
+      <div class="col-2">
+        <button (click)="handleEdit(comodidade)" class="icon-button">
+            <i class="fas fa-pen"></i>
+        </button>
+        <button (click)="handleDelete(comodidade.idComodidade)" class="icon-button">
+            <i class="fas fa-trash"></i>
+        </button>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<mat-dialog-actions>
+  <button class="me-2" (click)="handleCreate()">Criar Nova</button>
+  <button [mat-dialog-close]="true" cdkFocusInitial>Fechar</button>
+</mat-dialog-actions>
