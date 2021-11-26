@@ -33,6 +33,7 @@ import { ComodidadeCriarComponent } from './pages/rooms/modal/comodidade/comodid
 import { RoomsFormComponent } from './pages/rooms/rooms-form/rooms-form.component';
 import { ChipSelectorComponent } from './components/chip-selector/chip-selector.component';
 import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ReservesFormComponent } from './pages/reserves/reserves-form/reserves-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,8 @@ import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autoco
     ComodidadeComponent,
     ComodidadeCriarComponent,
     RoomsFormComponent,
-    ChipSelectorComponent
+    ChipSelectorComponent,
+    ReservesFormComponent
   ],
   imports: [
     BrowserModule,

@@ -11,8 +11,8 @@ export class ReservesComponent implements OnInit {
 
   filterItems = [
     {
-      data: 'nome',
-      title: 'Nome',
+      data: 'protocolo',
+      title: 'Protocolo',
       validators: [Validators.required],
       type: 'text'
     },
@@ -23,12 +23,21 @@ export class ReservesComponent implements OnInit {
       type: 'text'
     },
     {
-      data: 'email',
-      title: 'Email',
+      data: 'checkin',
+      title: 'Check-in',
       validators: [Validators.required, Validators.email],
-      type: 'text'
+      type: 'date'
+    },
+    {
+      data: 'checkout',
+      title: 'Check-out',
+      validators: [Validators.required, Validators.email],
+      type: 'date'
     }
   ]
+
+  dataSource: any[] = []
+  displayedColumns: string[] = ['protocolo', 'cpf', 'checkin', 'checkout', 'delete'];
 
   constructor(
     private headerService: HeaderService

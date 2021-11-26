@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-between h-f mt-3">
+
+    <div class="col-5" [formGroup]="form">
+        <app-input formControlName="cpf" class="b-input" mb="3" title="Cpf"></app-input>
+        
+        <div class="col-12 d-flex justify-content-between">
+            <div class="col-5">
+                <app-input type="date" formControlName="cpf" class="b-input" mb="3" title="Data Check-in"></app-input>
+            </div>
+            
+            <div class="col-5">
+                <app-input type="date" formControlName="cpf" class="b-input" mb="3" title="Data Check-out"></app-input>
+            </div>
+        </div>
+
+        <div class="col-12 d-flex justify-content-between">
+            <div class="col-5">
+                <app-input formControlName="cpf" class="b-input" mb="3" title="Numero de pessoas"></app-input>
+            </div>
+            
+            <div class="col-5">
+                <app-input formControlName="cpf" class="b-input" mb="3" title="Numero de Crianças"></app-input>
+            </div>
+        </div>
+
+    
+        <button [disabled]="canSave()" (click)="!id ? handleCreate() : handleEdit()" class="s-2 button-primary">
+            {{!id ? 'Cadastrar' : 'Editar'}}
+        </button>
+    </div>
+    
+    <div class="col-6 d-flex justify-content-center">
+    
+        <img height="400px" src="/assets/images/Departing-pana.svg"/>
+
+    </div>
+</div>

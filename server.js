@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors');
 
-const publicWeb = __dirname + '/dist/pim-hotel/browser';
+const publicWeb = __dirname + '/dist/pim-hotel';
 
 app.use(cors({ origin: '*' }));
 

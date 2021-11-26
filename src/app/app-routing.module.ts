@@ -12,6 +12,7 @@ import { GuestFormComponent } from './pages/guests/guest-form/guest-form.compone
 import { EmployersFormComponent } from './pages/employers/employers-form/employers-form.component';
 import { ServicesFormComponent } from './pages/services/services-form/services-form.component';
 import { RoomsFormComponent } from './pages/rooms/rooms-form/rooms-form.component';
+import { ReservesFormComponent } from './pages/reserves/reserves-form/reserves-form.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,8 @@ const routes: Routes = [
       { path: 'hospede/criar', component: GuestFormComponent },
       { path: 'hospede/criar/:id', component: GuestFormComponent },
       { path: 'reserva', component: ReservesComponent },
+      { path: 'reserva/criar', component: ReservesFormComponent },
+      { path: 'reserva/criar/:id', component: ReservesFormComponent },
       { path: 'quarto', component: RoomsComponent },
       { path: 'quarto/criar', component: RoomsFormComponent },
       { path: 'quarto/criar/:id', component: RoomsFormComponent },
